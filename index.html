@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,804 +8,82 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+    <script src="./assets/js/app.js" async type="module" defer></script>
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/slicknav.css">
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style_propio.css">
+    
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-    <style>
-        .faq-container {
-            width: 100%;
-            max-width: 900px;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .faq-container:hover {
-            transform: scale(1.02);
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #ddd;
-            padding: 20px 0;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-
-        .faq-item:hover {
-            background: #f1f8ff;
-            border-radius: 5px;
-        }
-
-        .faq-question {
-            font-size: 22px;
-            font-weight: bold;
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        .faq-question:hover {
-            color: #9f0912;
-        }
-
-        .faq-question::after {
-            content: '\25BC';
-            font-size: 20px;
-            color: #9f0912;
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-            font-size: 18px;
-            color: #555;
-            line-height: 1.8;
-            padding-top: 10px;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-            opacity: 1;
-        }
-
-
-
-
-
-
-        .slider-container {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-            margin: auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-
-        .slider {
-            display: flex;
-            width: max-content;
-            animation: slideAnimation 15s linear infinite;
-        }
-
-        .slide {
-            min-width: 150px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .slide img {
-            max-width: 120px;
-            height: auto;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .slide img:hover {
-            transform: scale(1.1);
-        }
-
-        @keyframes slideAnimation {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-    </style>
 </head>
 
-<body>
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder-logo.png" alt="">
-                </div>
-            </div>
-        </div>
+<body class="size-1520 primary-color-red background-dark ">
+    <div id="app">
+
+        <p-menu></p-menu>
+
+        <router-view></router-view>
+        <p-footer></p-footer>
+
     </div>
-    <!-- Preloader Start -->
-    <header>
-        <!-- Header Start -->
-        <div class="header-area header-transparent">
-            <div class="main-header ">
-                <div class="header-top d-none d-lg-block">
-                    <div class="container-fluid">
-                        <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>
-                                        <li>(+244) 975 331 452</li>
-                                        <li>comercial@melkor.ao </li>
-                                        <li>Seg - Sáb 8:00 - 17:30, Domingo - FECHADO</li>
-                                    </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    <ul class="header-social">
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-1">
-                                <div class="logo">
-                                    <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/logo.png"
-                                            alt=""></a>
-                                    <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/loder-logo.png"
-                                            alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-8 col-lg-8 col-md-8">
-                                <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="sobre.html">Sobre Nós</a></li> 
-                                            <li><a href="servicos.html">Serviços</a></li>
-                                     
-                                            
-                                            <li><a href="contacto.html">Contactos</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-2 col-md-3">
-                                <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Contata Agora</a>
-                                </div>
-                            </div>
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-    </header>
-    <main>
 
-        <!-- slider Area Start-->
-        <div class="slider-area ">
-            <div class="slider-active">
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="hero__caption">
-                                    <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">Serviços de Engenharia e
-                                            construção </span>
-                                    </div>
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">Construímos</h1>
-                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2> o seu futuro</h2>
-                                        <h2> o seu futuro</h2>
-                                    </div>
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Nossos Serviços</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="assets/img/hero/h1_hero.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="hero__caption">
-                                    <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing
-                                            service</span>
-                                    </div>
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
-                                    <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Construction</h2>
-                                        <h2>Construction</h2>
-                                    </div>
-                                    <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Our Services</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- slider Area End-->
-        <!-- Services Area Start -->
-        <div class="services-area1 section-padding30">
-            <div class="container">
-                <!-- section tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle mb-55">
-                            <div class="front-text">
-                                <h2 class="">Nossos Serviços</h2>
-                            </div>
-                            <span class="back-text">Serviços</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-6  ">
-                        <div class="single-service-cap mb-20">
-                            <div class="service-img">
-                                <img src="assets/img/service/servicess1.png" alt="">
-                            </div>
-                            <div class="service-cap">
-                                <h4><a href="services_details.html">Arquitetura</a></h4>
-                           </div>
-                            <div class="service-icon">
-                                <img src="assets/img/icon/services_icon1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-6 ">
-                        <div class="single-service-cap mb-20">
-                            <div class="service-img">
-                                <img src="assets/img/service/servicess2.png" alt="">
-                            </div>
-                            <div class="service-cap">
-                                <h4><a href="services_details.html">Engenharia</a></h4>
-                           </div>
-                            <div class="service-icon">
-                                <img src="assets/img/icon/services_icon1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-6 ">
-                        <div class="single-service-cap mb-20">
-                            <div class="service-img">
-                                <img src="assets/img/service/servicess3.png" alt="">
-                            </div>
-                            <div class="service-cap">
-                                <h4><a href="services_details.htmlaa">construção civil </a></h4>
-                           </div>
-                            <div class="service-icon">
-                                <img src="assets/img/icon/services_icon1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="service-cap text-center" style="text-align: center;">
-                        <a href="services.html" class="more-btn">Ver todos Serviços <i class="ti-plus"></i></a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Services Area End -->
-        <!-- Sobre Nós Area Start -->
-        <section class="support-company-area fix pt-10">
-            <div class="support-wrapper align-items-end">
-                <div class="left-content">
-                    <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
-                            <h2 class="">Quem somos</h2>
-                        </div>
-                        <span class="back-text">Sobre nós</span>
-                    </div>
-                    <div class="support-caption">
-                        <p class="pera-top"> Desde 2022, somos uma referência em construção civil, atuando com
-                            excelência em todo o território nacional.</p>
-                        <p> Nosso compromisso é transformar cada projeto em uma obra de qualidade excepcional, unindo
-                            expertise e dedicação. Com ampla experiência no setor, construímos espaços que não apenas
-                            atendem, mas superam as expectativas dos nossos clientes.</p>
-
-
-                        <a href="Sobre Nós.html" class="btn red-btn2">leia mais</a>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <!-- img -->
-                    <div class="right-img">
-                        <img src="assets/img/gallery/safe_in.png" alt="">
-                    </div>
-                    <div class="support-img-cap text-center">
-                        <p>Desde</p>
-                        <span>2022</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Sobre Nós Area End -->
-        <!-- Project Area Start -->
-        <div class="team-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle5 mb-50">
-                            <div class="front-text">
-                                <h2 class="">Portifolio</h2>
-                            </div>
-                            <span class="back-text">Galeria</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single Tem -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project1.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project2.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project3.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project4.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project5.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/project6.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project Area End -->
-        <!-- contact with us Start -->
-        <section class="contact-with-area" data-background="assets/img/gallery/section-bg2.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-9 offset-xl-1 offset-lg-1">
-                        <div class="contact-us-caption">
-                            <div class="team-info mb-30 pt-45">
-                                <!-- Section Tittle -->
-                                <div class="section-tittle section-tittle4">
-                                    <div class="front-text">
-                                        <h2 class="">Nosso Team</h2>
-                                    </div>
-                                    <span class="back-text">Equipe</span>
-                                </div>
-                                <p> Nossa equipe é composta por profissionais altamente qualificados e apaixonados pelo
-                                    que fazem. Desde arquitetos e engenheiros até operários e especialistas em
-                                    construção, trabalhamos em conjunto para transformar ideias em estruturas concretas.
-                                </p>
-                                <a href="#" class="white-btn">leia mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- contact with us End-->
-        <!-- CountDown Area Start -->
-        <div class="count-area">
-            <div class="container">
-                <div class="count-wrapper count-bg" data-background="assets/img/gallery/section-bg3.jpg">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="count-clients">
-                                <div class="single-counter">
-                                    <div class="count-number">
-                                        <span class="counter">92</span>
-                                    </div>
-                                    <div class="count-text">
-                                        <p>GARANTIA DE </p>
-                                        <h5>QUALIDADE</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="count-clients">
-                                <div class="single-counter">
-                                    <div class="count-number">
-                                        <span class="counter">98</span>
-                                    </div>
-                                    <div class="count-text">
-                                        <p>PLANEJAMENTO E</p>
-                                        <h5>ESTRATÉGIA</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="count-clients">
-                                <div class="single-counter">
-                                    <div class="count-number">
-                                        <span class="counter">90</span>
-                                    </div>
-                                    <div class="count-text">
-                                        <p>CONSTRUÇÃO DE </p>
-                                        <h5>PROCESSO</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- CountDown Area End -->
-        <!-- Team Start -->
-        <div class="team-area section-padding30">
-            <div class="container">
-
-                <div class="row">
-                    <!-- single Tem -->
-                    <div class="col-xl-7 col-lg-7 col-md-6 col-sm-">
-                        <div class="left-content">
-                            <!-- section tittle -->
-                            <div class="section-tittle section-tittle2 mb-55">
-                                <div class="front-text">
-                                    <h2 class="">Vantagem Competitiva Nacional</h2>
-                                </div>
-                                <span class="back-text">Vantagem</span>
-                            </div>
-                            <div class="support-caption">
-                                <p class="pera-top"> Ser o maior centro de conhecimento e inovação em soluções técnicas
-                                    e tecnológicas, consolidando a liderança e referência nacional na prestação de
-                                    serviços.
-
-                                </p>
-
-                                <p> Comprometemo-nos com profissionalismo, objetividade, integridade, honestidade,
-                                    justiça, imparcialidade e rigor, sempre aplicando as mais avançadas técnicas e
-                                    tecnologias de informação.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-5 col-lg-5 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/Mapa.png" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <!-- Team End -->
-
-
-        <div class="testimonial-area t-bg testimonial-padding">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle6 mb-50">
-                            <div class="front-text">
-                                <h2 class="">Nossos Clientes</h2>
-                            </div>
-                            <span class="back-text">Parceiros</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-container">
-                    <div class="slider" id="slider">
-                        <div class="slide"><img src="assets/img/parceiros/logo1.png" alt="Cliente 1"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo2.png" alt="Cliente 2"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo3.png" alt="Cliente 3"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo4.png" alt="Cliente 4"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo5.png" alt="Cliente 5"></div>
-                        <!-- Clones para efeito infinito -->
-                        <div class="slide"><img src="assets/img/parceiros/logo1.png" alt="Cliente 1"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo2.png" alt="Cliente 2"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo3.png" alt="Cliente 3"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo4.png" alt="Cliente 4"></div>
-                        <div class="slide"><img src="assets/img/parceiros/logo5.png" alt="Cliente 5"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-
-
-        <!--latest Nnews Area start -->
-        <div class="latest-news-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle7 mb-50">
-                            <div class="front-text">
-                                <h2 class="">Perguntas Frequentes</h2>
-                            </div>
-                            <span class="back-text">Perguntas</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-7 col-lg-7 col-md-7">
-
-                        <!-- single-news -->
-                        <div class="faq-container">
-                            <div class="faq-item">
-                                <p class="faq-question">O que é a Melkor?</p>
-                                <p class="faq-answer">A Melkor é uma empresa de referência na construção civil desde
-                                    2022.</p>
-                            </div>
-                            <div class="faq-item">
-                                <p class="faq-question">Quais serviços oferecemos?</p>
-                                <p class="faq-answer">Oferecemos serviços de construção civil, reformas e obras
-                                    públicas.</p>
-                            </div>
-                            <div class="faq-item">
-                                <p class="faq-question">Como entrar em contato?</p>
-                                <p class="faq-answer">Você pode nos contatar pelo e-mail ou telefone disponíveis em
-                                    nosso site.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-xl-5 col-lg-5 col-md-5">
-                        <img style="width: 100%;" src="assets/img/pergunta.png" alt="Cliente 1">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--latest News Area End -->
-
-    </main>
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-main">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row  justify-content-between">
-                        <div class="col-lg-4 col-md-4 col-sm-8">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">Desde 2022, somos uma referência em construção civil, atuando
-                                            com excelência em todo o território nacional.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Links Rapidos</h4>
-                                    <ul>
-                                        <li><a href="#">Sobre Nós</a></li>
-                                        <li><a href="#">Serviços</a></li>
-                                        <li><a href="#">Contacto</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-7">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Contacto</h4>
-                                    <div class="footer-pera">
-                                        <p class="info1">Routunda do camama, Rua 7, junto ao Banco BFA
-                                            -Edificio Siro Comercial</p>
-                                    </div>
-                                    <ul>
-                                        <li><a href="#">Phone: (+244) 975 331 452</a></li>
-                                        <li><a href="#">E-mail: comercial@melkor.ao</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank"
-                                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part" novalidate="true">
-                                            <input type="email" name="EMAIL" id="newsletter-form-email"
-                                                placeholder=" Endereço de Email " class="Endereço de Email"
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = ' Endereço de Email '">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm">
-                                                    sms
-                                                </button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- Map -->
-                                <div class="map-footer">
-                                    <img src="assets/img/gallery/map-footer.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Copy-Right -->
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 ">
-                            <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    © Copyright Melkor 2025. Todos os direitos reservados. |
-                                    Desenvolvido <i class="fa fa-heart" aria-hidden="true"></i> Pela <a href="/#"
-                                        target="_blank">JLSystem</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
-
-    <!-- JS here -->
+     <!-- JS here -->
 
     <!-- All JS Custom Plugins Link Here here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/lib/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/lib/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/lib/popper.min.js"></script>
+    <script src="./assets/lib/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/lib/jquery.slicknav.min.js"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/lib/owl.carousel.min.js"></script>
+    <script src="./assets/lib/slick.min.js"></script>
     <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/lib/gijgo.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/lib/wow.min.js"></script>
+    <script src="./assets/lib/animated.headline.js"></script>
+    <script src="./assets/lib/jquery.magnific-popup.js"></script>
 
     <!-- Scrollup, nice-select, sticky -->
-    <script src="./assets/js/jquery.scrollUp.min.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/lib/jquery.scrollUp.min.js"></script>
+    <script src="./assets/lib/jquery.nice-select.min.js"></script>
+    <script src="./assets/lib/jquery.sticky.js"></script>
 
     <!-- counter , waypoint -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/lib/jquery.counterup.min.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/lib/contact.js"></script>
+    <script src="./assets/lib/jquery.form.js"></script>
+    <script src="./assets/lib/jquery.validate.min.js"></script>
+    <script src="./assets/lib/mail-script.js"></script>
+    <script src="./assets/lib/jquery.ajaxchimp.min.js"></script>
 
     <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/lib/plugins.js"></script>
+    <script src="./assets/lib/main.js"></script>
 
-    <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                let isActive = item.classList.contains('active');
-
-                document.querySelectorAll('.faq-item').forEach(faq => {
-                    faq.classList.remove('active');
-                });
-
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- Template Javascript -->
+     <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

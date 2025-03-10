@@ -1,0 +1,180 @@
+.faq-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.faq-container:hover {
+    transform: scale(1.02);
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    background: #f1f8ff;
+    border-radius: 5px;
+}
+
+.faq-question {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #9f0912;
+}
+
+.faq-question::after {
+    content: '\25BC';
+    font-size: 20px;
+    color: #9f0912;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    padding-top: 10px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.slider {
+    display: flex;
+    width: max-content;
+    animation: slideAnimation 15s linear infinite;
+}
+
+.slide {
+    min-width: 150px;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.misao_visao {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    text-align: center;
+}
+
+.container_misao_visao {
+    max-width: 1600px;
+    margin: 50px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.box_misao_visao {
+    width: 450px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #e20100);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    color: white;
+}
+
+.box_misao_visao:hover {
+    transform: scale(1.05);
+}
+
+.icon_misao_visao {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .container_misao_visao {
+        flex-wrap: wrap;
+    }
+}

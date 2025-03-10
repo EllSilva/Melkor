@@ -3588,6 +3588,9 @@ hr {
 }
 
 .count-bg {
+
+    background-image: url('../img/gallery/section-bg3.jpg'); /* Caminho da imagem */ 
+
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -4072,6 +4075,9 @@ hr {
 }
 
 .contact-with-area {
+
+    background-image: url('../img/gallery/section-bg2.jpg'); /* Caminho da imagem */ 
+
     padding-top: 150px;
     padding-bottom: 250px;
     background-size: cover;
