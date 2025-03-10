@@ -68,5 +68,9 @@ export default {
          
       
     },
+
+    async mounted() {
+     
+    },
     template: await get_template('./assets/js/components/menu/home')
 }
